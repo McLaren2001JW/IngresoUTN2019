@@ -5,16 +5,15 @@ function Mostrar()
 	var acumulador = 0;
 	var numero;
 	var promedio;
-	var cantidad;
 
-	while(cantidad < 5){
+	for(contador = 0; contador < 5; contador++)
+	{
 		numero = parseInt(prompt("Ingrese un numero"));
-		acumulador= acumulador + numero;
-		contador= contador + 1;
+		acumulador = acumulador + numero;
 	}
 	promedio = acumulador / 5 ;
 
-	document.getElementById("suma").value = cumulador;
+	document.getElementById("suma").value = acumulador;
     document.getElementById("promedio").value = promedio / 5;
 } 
 
