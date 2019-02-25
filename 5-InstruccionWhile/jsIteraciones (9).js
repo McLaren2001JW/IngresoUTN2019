@@ -1,62 +1,35 @@
-function Mostrar()
-{
+function Mostrar() {
 
 	var contador = 0;
 	var numero;
 	var maximo;
 	var minimo;
-	var cantidad = 0
-	var respuesta ='si';
+	var respuesta="si";
 
-	while(respuesta!='no')
-	{
-		numero = prompt("ingrese un numero");
-		if(cantidad == 0)
-			{
-				maximo = numero;
-			    minimo = numero;
-			}
-			else
-			{
-			if (numero > maximo)
+	// declarar variables
+	do {
+		numero=parseInt(prompt("Ingrese su numero"));
 
-		{
+		if (contador == o) {
 			maximo = numero;
+			minimo = numero;
 		}
-		if (numero<minimo)
-		{
-			minimo = numero
+		if (numero > maximo) {
+			maximo=numero;
+
 		}
-	
-	}
-	cantidad ++;
-	respuesta = prompt("desea ingresar otro numero");
-	document.getElementById("minimo").value= minimo;
-	document.getElementById("maximo").value= minimo; 
-	
-}
-
-
-var contador = 0;
-	var numero;
-	var maximo;
-	var minimo;
-	var cantidad = 0
-	var respuesta ='si';
-	var flag = flase;
-
-while(respuesta!='no')
-	{
-		numero = prompt("ingrese un numero");
-		if (flag== false || numero>maximo)
-		{
-			maximo= numero;
-		}
-		if(flag== false || numero<minimo)
-		{
+		if (numero < minimo) {
 			minimo=numero;
-			flag = true;
 		}
+		contador++;
+		respuesta=prompt("desea continuar?").toLowerCase();
+
+	} while (respuesta == "si");
+
+	document.getElementById("maximo").value = maximo;
+	document.getElementById("minimo").value = minimo;
 
 
-}
+
+
+}//FIN DE LA FUNCIÓN
