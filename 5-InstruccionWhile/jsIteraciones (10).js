@@ -11,23 +11,33 @@ function Mostrar()
  var promedioNeg;
  var diferencia;
  var respuesta;
+																	/* Cantidad de positivos
+																		cantidad de negativos
+																		cantidad de ceros
+																		suma de positivos
+																		suma de negativos
+																		cantidad de numeros pares
+																		promedio positivos
+																		promedio negativos
+																		diferencia entre la cantidad de positivos y la cantidad de negativos 
 
+																	*/
  do {
 	 numero = parseInt(prompt("Ingrese un numero "));
-	 if(contadorNeg > 0)
+	 if(numero < 0)
 	 {
 		 acumuladorNeg += numero;
 		 contadorNeg++;
 	 }
-	 else if(numero == 0)
+	 else if(numero > 0)
 	 {
-		 contadorCeros++;
+        acumuladorPos += numero;
+        contadorPos++;
 	 }
 
 	 else
-	 {
-		 acumuladorNeg += numero;
-		 contadorNeg++;
+	 {      contadorCeros++;
+		 
 	 }
 
 	 if(numero % 2==0)
