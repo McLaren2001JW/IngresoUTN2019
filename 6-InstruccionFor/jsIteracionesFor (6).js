@@ -11,9 +11,8 @@ function Mostrar()
     {
          if(i % 2 == 0)
         {
-            console.log(i);
             cantidadPares++;
-
+            console.log(i);        
         }
         
     } 
